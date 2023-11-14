@@ -36,6 +36,39 @@ public class Humain {
 		parler("Mmmm, un bon verre de " + boissonFavorite + " ! GLOUPS !");
 	}
 	
+	protected int gagnerArgent(int sommeGagnee) {
+		if (sommeGagnee > 0) {
+			argent = argent + sommeGagnee;
+			parler("J'ai gagné de l'argent. Maintenant, j'ai " + argent + " d'argent.");
+		}
+		return argent;
+	}
+	protected int perdreArgent(int sommePerdue) {
+		if (sommePerdue < 0) {
+			parler("Je n'ai pas perdu d'argent. HAHA! J'ai toujours " + argent + " d'argent.");
+		} else if (sommePerdue > argent) {
+			argent = 0;
+			parler("J'ai perdu tout mon argent. Maintenant, j'ai " + argent + " d'argent.");
+		} else {
+			argent = argent - sommePerdue;
+			parler("J'ai perdu " + sommePerdue + " d'argent. Maintenant, j'ai " + argent + " d'argent.");
+		}
+		return argent;
+	}
+	public void faireConnaissanceAvec(Humain humain) {
+		
+	}
 	
+	private void memoriser(Humain humain) {
+		
+	}
+	
+	private void repondre(Humain humain) {
+		
+	}
+	
+	public void listerConnaisance() {
+		
+	}
 	
 }
