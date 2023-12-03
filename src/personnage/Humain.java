@@ -1,17 +1,13 @@
 package personnage;
 
 public class Humain {
-	private String nom;
-	private String boissonFavorite;
 	private int argent;
 	protected int nbConnaissance;
 	
+
 	
-	
-	public Humain(String nom, String boissonFavorite, int argent, int nbConnaissance) {
+	public Humain(int a, int argent, int nbConnaissance) {
 		super();
-		this.nom = nom;
-		this.boissonFavorite = boissonFavorite;
 		this.argent = argent;
 		this.nbConnaissance = nbConnaissance;
 	}
@@ -39,7 +35,7 @@ public class Humain {
 	protected int gagnerArgent(int sommeGagnee) {
 		if (sommeGagnee > 0) {
 			argent = argent + sommeGagnee;
-			parler("J'ai gagné de l'argent. Maintenant, j'ai " + argent + " d'argent.");
+			parler("J'ai gagnï¿½ de l'argent. Maintenant, j'ai " + argent + " d'argent.");
 		}
 		return argent;
 	}
